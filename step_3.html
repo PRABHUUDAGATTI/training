@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function textInputHandler(source){
+            /*console.log(source.type+"op")*/
+            document.getElementById(source.type+"op").value=source.value
+        }
+        function outputHandler(source){
+            /*console.log(source.type+"op")*/
+            document.getElementById("progress").value=source.value
+        }
+    </script>
+</head>
+<body>
+    <table border="5">
+        <thead>
+            <tr>
+                <th>type</th>
+                <th>as rendered by the browse</th>
+                <th>value enter by the user</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>text</td>
+                <td><input type="text" oninput="textInputHandler(this)"></td>
+                <td><output id="textop"></output></td>
+            </tr>
+            <tr>
+                <td>button</td>
+                <td><input type="number" oninput="textInputHandler(this)"></td>
+                <td><output id="numberop"></output></td>
+            </tr>
+            <tr>
+                <td>date</td>
+                <td><input type="date"oninput="textInputHandler(this)"></td>
+                <td><output id =dateop></output></td>
+            </tr>
+            <tr>
+                <td>url</td>
+                <td><input type="url"oninput="textInputHandler(this)"></td>
+                <td><output id="urlop"></output></td>
+            </tr>
+            <tr>
+                <td>range</td>
+                <td><input type="range" oninput="textInputHandler(this)"></td>
+                <td><output id="rangeop"></output></td>
+            </tr>
+            <tr>
+                <td>color</td>
+                <td><input type="color"oninput="textInputHandler(this)"></td>
+                <td><output id="colorop"></output></td>
+            </tr>
+            <tr>
+                <td>radio</td>
+                <td><input type="radio"oninput="textInputHandler(this)"></td>
+                <td><output id="radioop"></output></td>
+            </tr>
+            <tr>
+                <td>progress</td>
+                <td><input min="0" max="1" step="0.1" type="range" oninput="outputHandler(this)"></td>
+                <td><progress id="progress"></progress></td>
+            </tr>
+            <tr>
+                <td>meter</td>
+                <td><meter low="0.2" high="0.8" optimum="0.1" value="0.9"></meter></td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

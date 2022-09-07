@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function back(s)
+        {
+        document.getElementsByClassName("container")[0].style.backgroundColor = s.value
+        //document.l.style.backgroundColor = "red";
+        style.backgroundColor = s.value
+        }
+        function font(s)
+        {
+       document.getElementsByClassName("container")[0].style.color = s.value
+        //document.l.style.backgroundColor = "red";
+       
+        }
+
+    </script>
+</head>
+<body>
+   
+    <label> set background color
+       <input type="color"onchange="back(this)">
+      
+        
+    </label>
+    <br>
+    <label> set background color
+        <input type="color" onchange ="font(this)">
+    </label>
+    <div class="container">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Totam optio sapiente ea illo deleniti esse temporibus ipsa! Natus commodi laudantium at sequi et dolore excepturi architecto. Laudantium cumque vero praesentium?
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias magnam libero quas repudiandae nam? Hic quibusdam inventore ab fuga, ut ad quae aliquid! Inventore deleniti, dolorum adipisci soluta amet maiores?   
+    </div>
+</body>
+</html>
