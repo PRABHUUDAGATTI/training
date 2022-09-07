@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 02px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="500" height="500"></canvas>
+    <script>
+        
+        var ctx=document.getElementById("can").getContext("2d");
+        ctx.beginPath();
+        ctx.fillStyle="skyblue"
+        ctx.moveTo(0,400);
+        ctx.lineTo(500,400);
+        ctx.lineTo(500,500);
+        ctx.lineTo(00,500);
+        ctx.closePath()
+        ctx.fill()
+        ctx.stroke();
+
+        ctx.beginPath();
+       ctx.fillStyle="yellow"
+        ctx.moveTo(50,300);
+        ctx.lineTo(50,350);
+        ctx.lineTo(100,400);
+        ctx.lineTo(300,400);
+        ctx.lineTo(350,350);
+        ctx.lineTo(350,300);
+
+        ctx.lineTo(50,300);
+
+        //additional//
+        ctx.moveTo(50,300);
+        ctx.lineTo(25,250);
+        ctx.lineTo(350,300);
+
+        //additional2//
+        ctx.moveTo(50,300);
+        ctx.lineTo(40,240);
+        ctx.lineTo(350,300);
+
+        
+
+        
+        ctx.closePath()
+        ctx.fill()
+       
+        ctx.stroke();
+//flag//
+        ctx.beginPath();
+        ctx.fillStyle="red"
+        ctx.moveTo(350,300);
+        ctx.lineTo(350,150);
+        ctx.lineTo(400,150);
+        ctx.lineTo(375,175);
+        ctx.lineTo(400,200);
+        ctx.lineTo(350,200);
+        ctx.lineTo(345,300);
+        ctx.closePath()
+        ctx.fill()
+        ctx.stroke();
+
+
+        ctx.beginPath();
+        ctx.fillStyle="black"
+        ctx.moveTo(400,400);
+        ctx.lineTo(400,380);
+        ctx.lineTo(404,365);
+        ctx.lineTo(408,365);
+        ctx.lineTo(412,350);
+        ctx.lineTo(430,350);
+//betta//
+        ctx.lineTo(432,341);
+        ctx.lineTo(438,341);
+        ctx.lineTo(438,315);
+        ctx.lineTo(450,309);
+        ctx.lineTo(500,309);
+        ctx.lineTo(500,400);
+        ctx.lineTo(400,400);
+        ctx.closePath()
+        ctx.fill()
+        ctx.stroke();
+
+//
+ctx.beginPath();
+      ctx.moveTo(100,300);
+      ctx.lineTo(100,360);
+      ctx.moveTo(110,300);
+      ctx.lineTo(110,360);
+
+      ctx.moveTo(100,305);
+      ctx.lineTo(110,305);
+
+      ctx.moveTo(100,310);
+      ctx.lineTo(110,310);
+
+      ctx.moveTo(100,315);
+      ctx.lineTo(110,315);
+
+      ctx.moveTo(100,320);
+      ctx.lineTo(110,320);
+
+      ctx.moveTo(100,325);
+      ctx.lineTo(110,325);
+
+      ctx.moveTo(100,330);
+      ctx.lineTo(110,330);
+
+      ctx.moveTo(100,335);
+      ctx.lineTo(110,335);
+
+      ctx.moveTo(100,340);
+      ctx.lineTo(110,340);
+
+      ctx.moveTo(100,345);
+      ctx.lineTo(110,345);
+      ctx.stroke();
+
+//water
+setInterval(function(){
+            ctx.beginPath();
+            //ctx.clearRect(0,0,500,500)
+            var X=Math.round(Math.random()*500);
+            var Y=Math.round(Math.random()*500);
+            var ra=Math.round(Math.random()*30);
+            var red=Math.round(Math.random()*255);
+            var green=Math.round(Math.random()*255);
+            var blue=Math.round(Math.random()*255);
+            ctx.fillStyle="rgba(0,181,226,0.9)";
+           
+           // ctx.fillRect(boxX,boxY,boxD,boxD)
+           ctx.arc(X,Y+400,ra,0,(Math.PI/180)*360,true)
+           ctx.fill();
+           ctx.closePath();
+        },10);
+//wheel//
+ctx.beginPath();
+        ctx.strokeStyle="blue"
+        ctx.fillStyle="orange"
+        ctx.arc(250,350,20,0,(Math.PI/180)*360,true);
+        
+        ctx.closePath()
+        ctx.fill()
+        ctx.stroke()
+
+
+        ctx.beginPath();
+        ctx.strokeStyle="blue"
+        ctx.fillStyle="yellow"
+        ctx.arc(250,350,10,0,(Math.PI/180)*360,true);
+        
+        ctx.closePath()
+        ctx.fill()
+        ctx.stroke()
+        
+        ctx.beginPath();
+    ctx.fillRect(150,350,10,10)
+    ctx.fillStyle="blue";
+    ctx.fill();
+           ctx.closePath();
+        
+        
+    </script>
+    
+</body>
+</html>

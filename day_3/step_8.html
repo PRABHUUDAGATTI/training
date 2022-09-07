@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 02px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="500" height="500"></canvas>
+    <script>
+        
+        var ctx=document.getElementById("can").getContext("2d");
+        setInterval(function(){
+            ctx.beginPath();
+            //ctx.clearRect(0,0,500,500)
+            var X=Math.round(Math.random()*500);
+            var Y=Math.round(Math.random()*500);
+            var ra=Math.round(Math.random()*20);
+            var red=Math.round(Math.random()*255);
+            var green=Math.round(Math.random()*255);
+            var blue=Math.round(Math.random()*255);
+            ctx.fillStyle="rgba("+red+","+green+","+blue+",0.5)";
+           
+           // ctx.fillRect(boxX,boxY,boxD,boxD)
+           ctx.arc(X,Y,ra,0,(Math.PI/180)*360,true)
+           ctx.fill();
+           ctx.closePath();
+        },10);
+        setInterval(function(){
+            //ctx.clearRect(0,0,500,500)
+            var boxX=Math.round(Math.random()*500);
+            var boxY=Math.round(Math.random()*500);
+            var boxD=Math.round(Math.random()*40);
+            var red=Math.round(Math.random()*255);
+            var green=Math.round(Math.random()*255);
+            var blue=Math.round(Math.random()*255);
+            ctx.fillStyle="rgba("+red+","+green+","+blue+".0.5)";
+           
+            ctx.fillRect(boxX,boxY,boxD,boxD)
+        },10);
+        var boxx=-100;
+
+        setInterval(function(){
+            ctx.beginPath();
+            ctx.clearRect(500,10,0,0);
+            ctx.fillStyle="black"
+            ctx.fillRect(boxx,0,10,10);
+            boxx+=10;
+            if(boxx>500){
+                boxx=-100
+            }
+            ctx.fill();ctx.closePath()
+        },10)
+        
+        
+    </script>
+    
+</body>
+</html>
