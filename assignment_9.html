@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        canvas{
+            border: 02px solid black;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="can" width="500" height="500"></canvas>
+    <script>
+        
+        var x=0
+        var ctx=document.getElementById("can").getContext("2d");
+        
+        ctx.beginPath();
+        ctx.fillStyle="skyblue"
+        ctx.moveTo(0,400);
+        ctx.lineTo(500,400);
+        ctx.lineTo(500,500);
+        ctx.lineTo(00,500);
+        ctx.closePath()
+        ctx.fill()
+        ctx.stroke();
+
+        setInterval(function(){
+            ctx.clearRect(0,0,400,400)
+        ctx.beginPath();
+       ctx.fillStyle="yellow"
+        ctx.moveTo(x+50,300);
+        ctx.lineTo(x+50,350);
+        ctx.lineTo(x+100,400);
+        ctx.lineTo(x+300,400);
+        ctx.lineTo(x+350,350);
+        ctx.lineTo(x+350,300);
+
+        ctx.lineTo(x+50,300);
+
+        //additional//
+        ctx.moveTo(x+50,300);
+        ctx.lineTo(x+25,250);
+        ctx.lineTo(x+350,300);
+
+        //additional2//
+        ctx.moveTo(x+50,300);
+        ctx.lineTo(x+40,240);
+        ctx.lineTo(x+350,300);
+
+        
+
+        
+        ctx.closePath()
+        ctx.fill()
+       
+        ctx.stroke();
+
+    
+  
+//flag//
+        ctx.beginPath();
+        ctx.fillStyle="cyan"
+        ctx.moveTo(x+350,300);
+        ctx.lineTo(x+350,150);
+        ctx.lineTo(x+400,150);
+        ctx.lineTo(x+375,175);
+        ctx.lineTo(x+400,200);
+        ctx.lineTo(x+350,200);
+        ctx.lineTo(x+345,300);
+        ctx.closePath()
+        ctx.fill()
+        ctx.stroke();
+    
+
+
+        
+
+//ladder//
+
+ctx.beginPath();
+      ctx.moveTo(x+100,300);
+      ctx.lineTo(x+100,360);
+     ctx.moveTo(x+110,300);
+      ctx.lineTo(x+110,360);
+
+      ctx.moveTo(x+100,305);
+      ctx.lineTo(x+110,305);
+
+      ctx.moveTo(x+100,310);
+      ctx.lineTo(x+110,310);
+
+      ctx.moveTo(x+100,315);
+      ctx.lineTo(x+110,315);
+
+      ctx.moveTo(x+100,320);
+      ctx.lineTo(x+110,320);
+
+      ctx.moveTo(x+100,325);
+      ctx.lineTo(x+110,325);
+
+      ctx.moveTo(x+100,330);
+      ctx.lineTo(x+110,330);
+
+      ctx.moveTo(x+100,335);
+      ctx.lineTo(x+110,335);
+
+      ctx.moveTo(x+100,340);
+      ctx.lineTo(x+110,340);
+
+      ctx.moveTo(x+100,345);
+      ctx.lineTo(x+110,345);
+      ctx.stroke();
+
+//chimni//
+      ctx.beginPath();
+      ctx.fillStyle="red"
+      ctx.moveTo(x+250,300);
+      ctx.lineTo(x+250,240);
+      ctx.lineTo(x+236,240);
+      ctx.lineTo(x+270,220);
+      ctx.lineTo(x+270,300);
+      ctx.fill();
+      
+      ctx.moveTo(x+270,300);
+      ctx.lineTo(x+270,220);
+      ctx.lineTo(x+235,220);
+      ctx.lineTo(x+235,241);
+
+      ctx.moveTo(x+270,280);
+      ctx.lineTo(x+250,280);
+      //ctx.fill()
+      
+        ctx.stroke()
+
+
+
+
+      ctx.beginPath();
+        ctx.strokeStyle="blue"
+        ctx.fillStyle="orange"
+        ctx.arc(x+250,350,20,0,(Math.PI/180)*360,true);
+        
+        ctx.closePath()
+        ctx.fill()
+        ctx.stroke()
+
+
+        ctx.beginPath();
+        ctx.strokeStyle="blue"
+        ctx.fillStyle="yellow"
+        ctx.arc(x+250,350,10,0,(Math.PI/180)*360,true);
+        
+        ctx.closePath()
+        ctx.fill()
+        ctx.stroke()
+
+
+
+
+        ctx.beginPath();
+ctx.fillStyle="white"
+ctx.fillRect(x+200,340,20,20)
+
+ctx.fill()
+ctx.closePath()
+ctx.stroke()
+
+//window//
+ctx.beginPath();
+
+ctx.strokeStyle="black"
+ctx.fillStyle="blue"
+      ctx.moveTo(x+210,340);
+      ctx.lineTo(x+210,360)
+
+      ctx.moveTo(x+206,340);
+      ctx.lineTo(x+206,360)
+
+      ctx.moveTo(x+216,340);
+      ctx.lineTo(x+216,360)
+
+      ctx.moveTo(x+200,340);
+      ctx.lineTo(x+200,360)
+
+      ctx.moveTo(x+220,340);
+      ctx.lineTo(x+220,360)
+
+      ctx.moveTo(x+200,345);
+      ctx.lineTo(x+220,345);
+
+      ctx.moveTo(x+200,350);
+      ctx.lineTo(x+220,350);
+
+      ctx.moveTo(x+200,355);
+      ctx.lineTo(x+220,355);
+      ctx.fill()
+      ctx.closePath()
+      ctx.stroke()
+
+
+
+
+//safe guard//
+
+      ctx.beginPath();
+          // ctx.clearRect(0,0,235,240)
+            var X=Math.round(Math.random()*5);
+            var Y=230;
+            var ra=Math.round(Math.random()*10);
+            var red=Math.round(Math.random()*255);
+            var green=Math.round(Math.random()*255);
+            var blue=Math.round(Math.random()*255);
+            ctx.fillStyle="rgba(169,169,169,0.9)";
+           
+           // ctx.fillRect(boxX,boxY,boxD,boxD)
+           ctx.arc(X+x+225,Y,ra,0,(Math.PI/180)*360,true)
+           ctx.fill();
+           ctx.closePath();
+
+
+
+           ctx.beginPath();
+          // ctx.clearRect(0,0,215,235)
+            var X=Math.round(Math.random()*5);
+            var Y=230;
+            var ra=Math.round(Math.random()*11);
+            var red=Math.round(Math.random()*255);
+            var green=Math.round(Math.random()*255);
+            var blue=Math.round(Math.random()*255);
+            ctx.fillStyle="rgba(169,169,169,0.9)";
+           
+           // ctx.fillRect(boxX,boxY,boxD,boxD)
+           ctx.arc(X+x+215,Y,ra,0,(Math.PI/180)*360,true)
+           ctx.fill();
+           ctx.closePath();
+      x-=1
+      if(x<-400)
+      x=0
+    },100);
+    ctx.beginPath();
+        ctx.fillStyle="black"
+        ctx.moveTo(400,400);
+        ctx.lineTo(400,380);
+        ctx.lineTo(404,365);
+        ctx.lineTo(408,365);
+        ctx.lineTo(412,350);
+        ctx.lineTo(430,350);
+//betta//
+        ctx.lineTo(432,341);
+        ctx.lineTo(438,341);
+        ctx.lineTo(438,315);
+        ctx.lineTo(450,309);
+        ctx.lineTo(500,309);
+        ctx.lineTo(500,400);
+        ctx.lineTo(400,400);
+        ctx.closePath()
+        ctx.fill()
+        ctx.stroke();
+//water
+setInterval(function(){
+            ctx.beginPath();
+            //ctx.clearRect(0,0,500,500)
+            var X=Math.round(Math.random()*500);
+            var Y=Math.round(Math.random()*500);
+            var ra=Math.round(Math.random()*30);
+            var red=Math.round(Math.random()*255);
+            var green=Math.round(Math.random()*255);
+            var blue=Math.round(Math.random()*255);
+            ctx.fillStyle="rgba(0,181,226,0.9)";
+           
+           // ctx.fillRect(boxX,boxY,boxD,boxD)
+           ctx.arc(X,Y+400,ra,0,(Math.PI/180)*360,true)
+           ctx.fill();
+           ctx.closePath();
+        },10);
+//wheel//
+
+        
+       
+
+
+//smoke//
+      
+      
+//move//
+// setInterval(function(){
+           
+//         },100);
+
+        // setInterval(function(){
+            
+        // },100);
+    </script>
+    
+</body>
+</html>
